@@ -137,7 +137,7 @@ steps:
 
 Supported package managers:
 
-- `npm` - Uses `npx eslint`
+- `npm` - Uses `npm exec -- eslint`
 - `pnpm` - Uses `pnpm exec eslint`
 
 ## Security

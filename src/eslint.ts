@@ -11,9 +11,9 @@ const getExecutionCommand = (): { command: string; args: string[] } => {
 
   switch (packageManager) {
     case 'pnpm':
-      return { command: 'pnpm', args: ['dlx', 'eslint'] };
+      return { command: 'pnpm', args: ['exec', 'eslint'] };
     case 'npm':
-      return { command: 'npx', args: ['eslint'] };
+      return { command: 'npm', args: ['exec', '--', 'eslint'] };
     default:
       throw new Error(`Unsupported package manager: ${packageManager}. Supported: npm, pnpm`);
   }
